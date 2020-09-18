@@ -14,12 +14,12 @@ char **strtoken(char *entry)
 		fprintf(stderr, "Error: malloc failed\n");
 		exit(EXIT_FAILURE);
 	}
-	token = strtok(entry, "\t\n ");
+	token = strtok(entry, "\t\n\r ");
 	while (token)
 	{
 		each_word[x] = token;
 		x++;
-		token = strtok(NULL, "\t\n ");
+		token = strtok(NULL, "\t\n\r ");
 	}
 	return (each_word);
 }

@@ -6,7 +6,8 @@
 
 void (*structure(char *str, unsigned int n))(stack_t **stack, unsigned int line_number)
 {
-	int i = 0;
+	unsigned int i = 0;
+	printf("entre a structure\n");
 	instruction_t iopcode[]=
 	{
 		{"push", push},
@@ -15,6 +16,7 @@ void (*structure(char *str, unsigned int n))(stack_t **stack, unsigned int line_
 	};
 	while (iopcode[i].opcode)
 	{
+		
 		if (strcmp(str, iopcode[i].opcode) == 0)
 		{
 			return (iopcode[i].f);

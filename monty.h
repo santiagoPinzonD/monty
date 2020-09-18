@@ -39,10 +39,13 @@ typedef struct instruction_s
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
+extern int number;
+int number;
 
 char **strtoken(char *entry);
 void (*structure(char *str, unsigned int n))(stack_t **stack, unsigned int line_number);
 void push(stack_t **head, unsigned int num_line);
 void pall(stack_t **head, unsigned int num_line);
+int not_space(char *entry);
 
 #endif
